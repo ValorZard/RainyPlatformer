@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct4wjes67om1"]
+
+[ext_resource type="PackedScene" uid="uid://di7p6wgg3v4fj" path="res://Platforms/TestPlatform.tscn" id="1_5885n"]
+[ext_resource type="PackedScene" uid="uid://cfpv8m0lwxvea" path="res://Actors/person.tscn" id="2_tqh3s"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="TestPlatform" parent="." instance=ExtResource("1_5885n")]
+position = Vector2(630, 681)
+scale = Vector2(10, 1)
+
+[node name="Person" parent="." instance=ExtResource("2_tqh3s")]
+position = Vector2(499, 256)
+
+[node name="Person2" parent="." instance=ExtResource("2_tqh3s")]
+position = Vector2(664, 249)
+
+[node name="Person3" parent="." instance=ExtResource("2_tqh3s")]
+position = Vector2(610, 373)
+
+[node name="Person4" parent="." instance=ExtResource("2_tqh3s")]
+position = Vector2(579, 230)
+
+[node name="Person5" parent="." instance=ExtResource("2_tqh3s")]
+position = Vector2(582, 307)
+
+[node name="Person6" parent="." instance=ExtResource("2_tqh3s")]
+position = Vector2(645, 316)
+
+[node name="Person7" parent="." instance=ExtResource("2_tqh3s")]
+position = Vector2(620, 132)
+
+[node name="Person8" parent="." instance=ExtResource("2_tqh3s")]
+position = Vector2(556, 122)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfpv8m0lwxvea"]
+
+[ext_resource type="Texture2D" uid="uid://uj0wn7sas77l" path="res://Art/TestGuy.png" id="1_8pnwv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_01u2j"]
+radius = 20.0
+
+[node name="Person" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8pnwv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_01u2j")
