@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ct4wjes67om1"]
+[gd_scene load_steps=6 format=3 uid="uid://ct4wjes67om1"]
 
 [ext_resource type="PackedScene" uid="uid://di7p6wgg3v4fj" path="res://Platforms/TestPlatform.tscn" id="1_5885n"]
 [ext_resource type="PackedScene" uid="uid://cfpv8m0lwxvea" path="res://Actors/person.tscn" id="2_tqh3s"]
 [ext_resource type="PackedScene" uid="uid://cvboky6pqlyk0" path="res://Player/Player.tscn" id="4_2o081"]
+[ext_resource type="Texture2D" uid="uid://c3ryvuqs1rsum" path="res://Art/TestScoop.png" id="4_c4mpt"]
+
+[sub_resource type="ConcavePolygonShape2D" id="ConcavePolygonShape2D_dxhco"]
 
 [node name="TestScene" type="Node2D"]
 
@@ -36,3 +39,11 @@ position = Vector2(556, 122)
 
 [node name="Player" parent="." instance=ExtResource("4_2o081")]
 position = Vector2(636, 548)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(0, -36)
+scale = Vector2(0.41, 0.41)
+texture = ExtResource("4_c4mpt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("ConcavePolygonShape2D_dxhco")
