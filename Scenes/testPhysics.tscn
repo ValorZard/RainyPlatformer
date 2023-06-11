@@ -1,18 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://ct4wjes67om1"]
+[gd_scene load_steps=7 format=3 uid="uid://ct4wjes67om1"]
 
 [ext_resource type="PackedScene" uid="uid://di7p6wgg3v4fj" path="res://Platforms/TestPlatform.tscn" id="1_5885n"]
 [ext_resource type="PackedScene" uid="uid://cfpv8m0lwxvea" path="res://Actors/person.tscn" id="2_tqh3s"]
 [ext_resource type="PackedScene" uid="uid://cvboky6pqlyk0" path="res://Player/Player.tscn" id="4_2o081"]
 [ext_resource type="Texture2D" uid="uid://c3ryvuqs1rsum" path="res://Art/TestScoop.png" id="4_c4mpt"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2tmt"]
-size = Vector2(30, 10)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0h71"]
+size = Vector2(47, 15)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t26f"]
-size = Vector2(30, 10)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ruien"]
-size = Vector2(30, 10)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2x42w"]
+size = Vector2(50.5031, 15.695)
 
 [node name="TestScene" type="Node2D"]
 
@@ -47,21 +44,28 @@ position = Vector2(556, 122)
 [node name="Player" parent="." instance=ExtResource("4_2o081")]
 position = Vector2(636, 548)
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(0, -36)
-scale = Vector2(0.41, 0.41)
+[node name="TestScoop" type="RigidBody2D" parent="Player"]
+position = Vector2(0, -45)
+collision_mask = 2
+mass = 10.0
+lock_rotation = true
+freeze = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/TestScoop"]
+texture_filter = 1
+scale = Vector2(0.59, 0.59)
 texture = ExtResource("4_c4mpt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-25, -30)
-rotation = 0.872665
-shape = SubResource("RectangleShape2D_p2tmt")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/TestScoop"]
+position = Vector2(0, 25)
+shape = SubResource("RectangleShape2D_p0h71")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
-position = Vector2(0, -20)
-shape = SubResource("RectangleShape2D_5t26f")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player/TestScoop"]
+position = Vector2(-36.6425, 7.77359)
+rotation = 0.958186
+shape = SubResource("RectangleShape2D_2x42w")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Player"]
-position = Vector2(25, -30)
-rotation = -0.872665
-shape = SubResource("RectangleShape2D_ruien")
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Player/TestScoop"]
+position = Vector2(36.642, 7.774)
+rotation = -0.958186
+shape = SubResource("RectangleShape2D_2x42w")
