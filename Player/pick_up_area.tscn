@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceel35xn1mxi5"]
+
+[ext_resource type="Script" path="res://Player/pick_up_area.gd" id="1_2qec8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pafa7"]
+radius = 20.0
+height = 50.0
+
+[node name="PickUpArea" type="Area2D"]
+collision_mask = 17
+script = ExtResource("1_2qec8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_pafa7")

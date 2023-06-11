@@ -1,4 +1,7 @@
 extends CharacterBody2D
+
+class_name Player
+
 ## This character controller was created with the intent of being a decent starting point for Platformers.
 ## 
 ## Instead of teaching the basics, I tried to implement more advanced considerations.
@@ -48,7 +51,6 @@ func get_input() -> Dictionary:
 		"jump": Input.is_action_pressed("jump") == true,
 		"released_jump": Input.is_action_just_released("jump") == true
 	}
-
 
 func _physics_process(delta: float) -> void:
 	x_movement(delta)

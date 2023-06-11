@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ct4wjes67om1"]
+[gd_scene load_steps=6 format=3 uid="uid://ct4wjes67om1"]
 
 [ext_resource type="PackedScene" uid="uid://di7p6wgg3v4fj" path="res://Platforms/TestPlatform.tscn" id="1_5885n"]
 [ext_resource type="PackedScene" uid="uid://cfpv8m0lwxvea" path="res://Actors/person.tscn" id="2_tqh3s"]
-[ext_resource type="PackedScene" uid="uid://cvboky6pqlyk0" path="res://Player/Player.tscn" id="4_2o081"]
+[ext_resource type="PackedScene" uid="uid://cy40ffinx3qio" path="res://Player/Player.tscn" id="4_2o081"]
 [ext_resource type="PackedScene" uid="uid://b51nwhwjwsr2i" path="res://Player/test_scoop.tscn" id="4_6gant"]
+[ext_resource type="PackedScene" uid="uid://ceel35xn1mxi5" path="res://Player/pick_up_area.tscn" id="4_y1nyq"]
 
 [node name="TestScene" type="Node2D"]
 
@@ -37,5 +38,9 @@ position = Vector2(556, 122)
 
 [node name="Player" parent="." instance=ExtResource("4_2o081")]
 position = Vector2(636, 548)
+
+[node name="PickUpArea2" parent="Player" node_paths=PackedStringArray("scoop", "player") instance=ExtResource("4_y1nyq")]
+scoop = NodePath("../TestScoop2")
+player = NodePath("..")
 
 [node name="TestScoop2" parent="Player" instance=ExtResource("4_6gant")]

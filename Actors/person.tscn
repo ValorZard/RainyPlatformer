@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfpv8m0lwxvea"]
+[gd_scene load_steps=4 format=3 uid="uid://cfpv8m0lwxvea"]
 
 [ext_resource type="Texture2D" uid="uid://uj0wn7sas77l" path="res://Art/TestGuy.png" id="1_8pnwv"]
+[ext_resource type="Script" path="res://Actors/person.gd" id="1_qfpyj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vv1gr"]
 size = Vector2(26, 34)
@@ -9,6 +10,7 @@ size = Vector2(26, 34)
 collision_layer = 16
 collision_mask = 50
 mass = 10.0
+script = ExtResource("1_qfpyj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b51nwhwjwsr2i"]
+[gd_scene load_steps=5 format=3 uid="uid://b51nwhwjwsr2i"]
 
+[ext_resource type="Script" path="res://Player/scoop.gd" id="1_igqgq"]
 [ext_resource type="Texture2D" uid="uid://c3ryvuqs1rsum" path="res://Art/TestScoop.png" id="1_p6w0o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upig2"]
@@ -8,13 +9,15 @@ size = Vector2(47, 15)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_widvh"]
 size = Vector2(50.5031, 15.695)
 
-[node name="TestScoop" type="RigidBody2D"]
+[node name="TestScoop" type="RigidBody2D" node_paths=PackedStringArray("spawn_point")]
 position = Vector2(0, -45)
 collision_layer = 32
 collision_mask = 18
 mass = 10.0
 lock_rotation = true
 freeze = true
+script = ExtResource("1_igqgq")
+spawn_point = NodePath("SpawnPoint")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -34,3 +37,9 @@ shape = SubResource("RectangleShape2D_widvh")
 position = Vector2(36.642, 7.774)
 rotation = -0.958186
 shape = SubResource("RectangleShape2D_widvh")
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(0, -20)
+
+[node name="SpawnPoint2" type="Node2D" parent="."]
+position = Vector2(0, -20)
