@@ -40,7 +40,8 @@ position = Vector2(556, 122)
 position = Vector2(636, 548)
 
 [node name="PickUpArea2" parent="Player" node_paths=PackedStringArray("scoop", "player") instance=ExtResource("4_y1nyq")]
-scoop = NodePath("../TestScoop2")
+scoop = NodePath("../TestScoop")
 player = NodePath("..")
 
-[node name="TestScoop2" parent="Player" instance=ExtResource("4_6gant")]
+[node name="TestScoop" parent="Player" node_paths=PackedStringArray("player") instance=ExtResource("4_6gant")]
+player = NodePath("..")
