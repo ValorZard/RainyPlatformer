@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.0")
 config/icon="res://Art/icon.png"
 config/windows_native_icon="res://icon.ico"
 
+[autoload]
+
+Gamemanager="*res://Scripts/gamemanager.gd"
+
 [display]
 
 window/stretch/mode="viewport"
