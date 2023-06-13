@@ -39,6 +39,10 @@ var x_dir := 1
 var jump_coyote_timer : float = 0
 var jump_buffer_timer : float = 0
 var is_jumping := false
+
+@export var person_dex : PersonDex
+
+@export var people_array : Array[PersonData]
 # ----------------------------------- #
 
 

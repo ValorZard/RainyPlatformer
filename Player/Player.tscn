@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cy40ffinx3qio"]
+[gd_scene load_steps=11 format=3 uid="uid://cy40ffinx3qio"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1"]
 [ext_resource type="Script" path="res://Player/Sprite.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://b4g1cqyoecp0s" path="res://UI/PersonDex.tscn" id="3_p0hdk"]
+[ext_resource type="PackedScene" uid="uid://ceel35xn1mxi5" path="res://Player/pick_up_area.tscn" id="4_arxqf"]
+[ext_resource type="PackedScene" uid="uid://0jn8idiebeuu" path="res://UI/PersonCard.tscn" id="5_4ogfr"]
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(32, 24)
@@ -49,7 +51,7 @@ _data = {
 "Land": SubResource("4")
 }
 
-[node name="Player" type="CharacterBody2D" groups=["Player"]]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("person_dex") groups=["Player"]]
 z_index = 10
 collision_mask = 14
 floor_snap_length = 16.0
@@ -61,6 +63,7 @@ jump_force = 1200.0
 jump_cut = 0.4
 jump_gravity_max = 1000.0
 jump_hang_gravity_mult = 0.05
+person_dex = NodePath("CanvasLayer/PersonDex")
 
 [node name="SquareCollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)
@@ -97,3 +100,9 @@ libraries = {
 visible = false
 
 [node name="PersonDex" parent="CanvasLayer" instance=ExtResource("3_p0hdk")]
+
+[node name="PickUpArea" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_arxqf")]
+player = NodePath("..")
+person_card = ExtResource("5_4ogfr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
