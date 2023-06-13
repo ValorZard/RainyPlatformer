@@ -68,6 +68,10 @@ person_data = ExtResource("2_ky2sg")
 [node name="Player" parent="." instance=ExtResource("4_2o081")]
 position = Vector2(636, 548)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]
+
+[node name="PersonDex" parent="Player/CanvasLayer" instance=ExtResource("9_bhlcj")]
+
 [node name="PickUpArea2" parent="Player" node_paths=PackedStringArray("scoop", "player") instance=ExtResource("4_y1nyq")]
 scoop = NodePath("../TestScoop")
 player = NodePath("..")
@@ -112,7 +116,3 @@ offset_left = 361.0
 offset_top = 510.0
 offset_right = 463.0
 offset_bottom = 550.0
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="PersonDex" parent="CanvasLayer" instance=ExtResource("9_bhlcj")]
