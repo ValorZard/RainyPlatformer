@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cy40ffinx3qio"]
+[gd_scene load_steps=9 format=3 uid="uid://cy40ffinx3qio"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1"]
 [ext_resource type="Script" path="res://Player/Sprite.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://b4g1cqyoecp0s" path="res://UI/PersonDex.tscn" id="3_p0hdk"]
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(32, 24)
@@ -91,3 +92,8 @@ polygon = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
 libraries = {
 "": SubResource("AnimationLibrary_1lb64")
 }
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="PersonDex" parent="CanvasLayer" instance=ExtResource("3_p0hdk")]

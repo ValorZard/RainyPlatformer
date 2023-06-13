@@ -49,8 +49,16 @@ func get_input() -> Dictionary:
 		"y": int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up")),
 		"just_jump": Input.is_action_just_pressed("jump") == true,
 		"jump": Input.is_action_pressed("jump") == true,
-		"released_jump": Input.is_action_just_released("jump") == true
+		"released_jump": Input.is_action_just_released("jump") == true,
+		"open_menu": Input.is_action_just_pressed("open_menu") == true
 	}
+
+func handle_UI() -> void:
+	if get_input()["open_menu"]:
+		if !$CanvasLayer.visible:
+			$CanvasLayer.visible = true
+		else:
+			$CanvasLayer.visible = false
 
 func _physics_process(delta: float) -> void:
 	x_movement(delta)
@@ -59,6 +67,7 @@ func _physics_process(delta: float) -> void:
 	
 	timers(delta)
 	move_and_slide()
+	handle_UI()
 
 
 func x_movement(delta: float) -> void:
