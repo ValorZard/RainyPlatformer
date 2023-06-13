@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PersonData" load_steps=2 format=3 uid="uid://b86875x15u2s4"]
+
+[ext_resource type="Script" path="res://Actors/person_data.gd" id="1_0xns0"]
+
+[resource]
+script = ExtResource("1_0xns0")
+name = "Steve"
+description = "he is from minecraft"

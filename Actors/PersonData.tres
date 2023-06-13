@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bfikxe3v3msor"]
+
+[ext_resource type="Script" path="res://Actors/person_data.gd" id="1_xliop"]
+
+[resource]
+script = ExtResource("1_xliop")
+name = ""
+description = ""
