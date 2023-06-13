@@ -4,7 +4,9 @@ class_name Person
 
 var teleport := false
 var teleport_position : Vector2
-var player : Player
+@export var player : Player
+
+@export var scoop : Scoop
 
 var max_speed = 100
 
@@ -31,6 +33,9 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		state.transform.origin = teleport_position
 		teleport = false
 	if abs(get_linear_velocity().length()) > max_speed:
+		state.linear_velocity = player.velocity
+		state.angular_velocity = 0.0
+		state.transform.origin = scoop.spawn_point.global_position
 		var new_speed = get_linear_velocity().normalized()
 		new_speed *= max_speed
 		set_linear_velocity(new_speed)
