@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b4g1cqyoecp0s"]
+[gd_scene load_steps=2 format=3 uid="uid://b4g1cqyoecp0s"]
+
+[ext_resource type="PackedScene" uid="uid://0jn8idiebeuu" path="res://UI/PersonCard.tscn" id="1_noo6t"]
 
 [node name="PersonDex" type="Control"]
 layout_mode = 3
@@ -18,5 +20,54 @@ grow_vertical = 2
 
 [node name="GridContainer" type="GridContainer" parent="Panel"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1152.0
+offset_bottom = 648.0
+columns = 8
+
+[node name="PersonCard2" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard3" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard4" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard5" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard6" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard7" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard8" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard9" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard10" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard11" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard12" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard13" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard14" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard15" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2
+
+[node name="PersonCard16" parent="Panel/GridContainer" instance=ExtResource("1_noo6t")]
+layout_mode = 2

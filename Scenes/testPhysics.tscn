@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ct4wjes67om1"]
+[gd_scene load_steps=14 format=3 uid="uid://ct4wjes67om1"]
 
 [ext_resource type="Resource" uid="uid://b86875x15u2s4" path="res://Actors/Peoples/Steve.tres" id="2_ky2sg"]
 [ext_resource type="PackedScene" uid="uid://cfpv8m0lwxvea" path="res://Actors/person.tscn" id="2_tqh3s"]
@@ -9,7 +9,6 @@
 [ext_resource type="Script" path="res://Scenes/Shrine.gd" id="6_fr70l"]
 [ext_resource type="Texture2D" uid="uid://dklar3eu1r8il" path="res://icon.svg" id="7_dr8mv"]
 [ext_resource type="PackedScene" uid="uid://b4g1cqyoecp0s" path="res://UI/PersonDex.tscn" id="9_bhlcj"]
-[ext_resource type="PackedScene" uid="uid://0jn8idiebeuu" path="res://UI/PersonCard.tscn" id="10_jrhwh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3l8kd"]
 
@@ -114,6 +113,6 @@ offset_top = 510.0
 offset_right = 463.0
 offset_bottom = 550.0
 
-[node name="PersonCard" parent="." instance=ExtResource("10_jrhwh")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PersonDex" parent="." instance=ExtResource("9_bhlcj")]
+[node name="PersonDex" parent="CanvasLayer" instance=ExtResource("9_bhlcj")]

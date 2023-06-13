@@ -10,6 +10,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_gd57k")
 person_data = ExtResource("2_g58qj")
 
@@ -28,3 +30,4 @@ layout_mode = 2
 
 [node name="DescriptionLabel" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
+autowrap_mode = 2
