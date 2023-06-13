@@ -21,6 +21,13 @@ grow_vertical = 2
 
 [node name="GridContainer" type="GridContainer" parent="Panel"]
 layout_mode = 0
+offset_top = 48.0
 offset_right = 1152.0
 offset_bottom = 648.0
 columns = 8
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 2
+offset_right = 166.0
+offset_bottom = 26.0
+text = "People Being Carried:"

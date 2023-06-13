@@ -99,7 +99,8 @@ libraries = {
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
 
-[node name="PersonDex" parent="CanvasLayer" instance=ExtResource("3_p0hdk")]
+[node name="PersonDex" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("3_p0hdk")]
+player = NodePath("../..")
 
 [node name="PickUpArea" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_arxqf")]
 player = NodePath("..")
