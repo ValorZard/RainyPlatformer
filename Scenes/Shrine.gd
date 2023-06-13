@@ -1,16 +1,16 @@
 extends Area2D
 
-
+class_name Shrine
 
 func _ready():
 	self.connect("body_entered", pick_up_person)
 
-func pick_up_person(person):
+func pick_up_person(player):
 	# print(person.name)
-	if person is Person:
+	if player is Player:
 		# print("shrine")
 		# put the person in the scoop
-		person.queue_free()
-		Gamemanager.score += 1
+		Gamemanager.score += player.people_array.size()
 		$scoretext.text = "score" + str(Gamemanager.score)
+		player.people_array.clear()
 

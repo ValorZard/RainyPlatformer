@@ -16,6 +16,7 @@ func pick_up_person(person):
 		var instance = person_card.instantiate()
 		player.person_dex.add_card(instance)
 		person.queue_free()
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
