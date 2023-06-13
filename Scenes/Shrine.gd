@@ -6,9 +6,9 @@ func _ready():
 	self.connect("body_entered", pick_up_person)
 
 func pick_up_person(person):
-	print(person.name)
+	# print(person.name)
 	if person is Person:
-		print("shrine")
+		# print("shrine")
 		# put the person in the scoop
 		person.queue_free()
 		Gamemanager.score += 1

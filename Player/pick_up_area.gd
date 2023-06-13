@@ -11,7 +11,7 @@ func pick_up_person(person):
 	#print(person.name)
 	if person is Person:
 		# put the person in the scoop
-		person.set_location(scoop.spawn_point.global_position, player.velocity)
+		person.set_location(scoop.spawn_point.global_position, player)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

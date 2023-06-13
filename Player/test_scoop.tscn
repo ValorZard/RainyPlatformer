@@ -11,8 +11,8 @@ size = Vector2(60.2515, 15.695)
 
 [node name="TestScoop" type="StaticBody2D" node_paths=PackedStringArray("spawn_point")]
 position = Vector2(0, -45)
-collision_layer = 32
-collision_mask = 18
+collision_layer = 33
+collision_mask = 31
 script = ExtResource("1_igqgq")
 spawn_point = NodePath("SpawnPoint")
 

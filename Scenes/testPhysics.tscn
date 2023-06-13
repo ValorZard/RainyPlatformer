@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ct4wjes67om1"]
+[gd_scene load_steps=12 format=3 uid="uid://ct4wjes67om1"]
 
 [ext_resource type="PackedScene" uid="uid://cfpv8m0lwxvea" path="res://Actors/person.tscn" id="2_tqh3s"]
 [ext_resource type="PackedScene" uid="uid://cy40ffinx3qio" path="res://Player/Player.tscn" id="4_2o081"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dxtx8htjdu1mh" path="res://Art/TilesetOf5.png" id="6_47mak"]
 [ext_resource type="Script" path="res://Scenes/Shrine.gd" id="6_fr70l"]
 [ext_resource type="Texture2D" uid="uid://dklar3eu1r8il" path="res://icon.svg" id="7_dr8mv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3l8kd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_13qij"]
 texture = ExtResource("6_47mak")
@@ -60,10 +62,17 @@ size = Vector2(108, 100)
 position = Vector2(499, 256)
 
 [node name="Person2" parent="." instance=ExtResource("2_tqh3s")]
-position = Vector2(664, 249)
+position = Vector2(652, 468)
+can_report = true
 
 [node name="Person3" parent="." instance=ExtResource("2_tqh3s")]
-position = Vector2(610, 373)
+position = Vector2(637, 489)
+can_report = true
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Person3"]
+node_a = NodePath("..")
+node_b = NodePath("../../Person2")
+bias = 0.9
 
 [node name="Person4" parent="." instance=ExtResource("2_tqh3s")]
 position = Vector2(579, 230)
@@ -89,6 +98,25 @@ player = NodePath("..")
 
 [node name="TestScoop" parent="Player" node_paths=PackedStringArray("player") instance=ExtResource("4_6gant")]
 player = NodePath("..")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Player"]
+position = Vector2(0, -27)
+lock_rotation = true
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/RigidBody2D"]
+position = Vector2(0, 12)
+shape = SubResource("CircleShape2D_3l8kd")
+disabled = true
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Player"]
+position = Vector2(0, -16)
+node_a = NodePath("../RigidBody2D")
+node_b = NodePath("../../Person3")
+bias = 0.9
+disable_collision = false
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(0.125, 0.125)
