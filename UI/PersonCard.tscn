@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://0jn8idiebeuu"]
+
+[ext_resource type="Script" path="res://UI/PersonCard.gd" id="1_gd57k"]
+[ext_resource type="Resource" uid="uid://b86875x15u2s4" path="res://Actors/Peoples/Steve.tres" id="2_g58qj"]
+
+[node name="PersonCard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gd57k")
+person_data = ExtResource("2_g58qj")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 275.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NameLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
