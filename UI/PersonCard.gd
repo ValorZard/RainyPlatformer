@@ -9,6 +9,7 @@ class_name PersonCard
 func _ready():
 	$Panel/VBoxContainer/NameLabel.text = person_data.name
 	$Panel/VBoxContainer/DescriptionLabel.text = person_data.description
+	$Panel/VBoxContainer/Icon.texture = person_data.icon
 	pass # Replace with function body.
 
 

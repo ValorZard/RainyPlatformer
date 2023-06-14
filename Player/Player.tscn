@@ -107,3 +107,4 @@ player = NodePath("..")
 person_card = ExtResource("5_4ogfr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -63)
