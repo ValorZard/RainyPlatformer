@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwmwpxet6834c"]
+
+[ext_resource type="Texture2D" uid="uid://dklar3eu1r8il" path="res://icon.svg" id="1_wowba"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bg5k"]
+bg_color = Color(0.117647, 0.368627, 0.329412, 0.560784)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mjqeh"]
+font_size = 32
+font_color = Color(0.32549, 0.552941, 1, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="DialogueBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.0512153
+anchor_bottom = 0.591049
+offset_top = -64.0
+offset_right = 126.0
+offset_bottom = 62.0
+grow_vertical = 2
+texture = ExtResource("1_wowba")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+offset_top = 448.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7bg5k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 200.0
+
+[node name="Name" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "[Name]"
+label_settings = SubResource("LabelSettings_mjqeh")
+
+[node name="Dialogue" type="RichTextLabel" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
+text = "Text goes here and talks"
+fit_content = true
