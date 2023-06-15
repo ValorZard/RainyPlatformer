@@ -59,10 +59,10 @@ func get_input() -> Dictionary:
 
 func handle_UI() -> void:
 	if get_input()["open_menu"]:
-		if !$CanvasLayer.visible:
-			$CanvasLayer.visible = true
+		if !$CanvasLayer/PersonDex.visible:
+			$CanvasLayer/PersonDex.visible = true
 		else:
-			$CanvasLayer.visible = false
+			$CanvasLayer/PersonDex.visible = false
 
 func _physics_process(delta: float) -> void:
 	x_movement(delta)

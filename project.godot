@@ -19,7 +19,15 @@ config/windows_native_icon="res://icon.ico"
 [autoload]
 
 Gamemanager="*res://Scripts/gamemanager.gd"
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Deltascript="*res://addons/deltascript/deltascript_singleton.gd"
+
+[deltascript]
+
+scripts/dialogue_script="res://Dialogue/Scripts/tag_dialogue.gd"
+scripts/tag_scripts=["res://Dialogue/Scripts/tag_char.gd"]
+event_playback/default_event_metadata={
+"Speaker": ""
+}
 
 [display]
 
@@ -28,7 +36,7 @@ window/size/fullscreen=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/deltascript/plugin.cfg")
 
 [input]
 
