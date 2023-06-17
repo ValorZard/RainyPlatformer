@@ -7,4 +7,8 @@ func _line_start():
 	current_dialogue.word_text = line_text
 	current_dialogue.name_label = event_player.get_event_metadata("Speaker")
 	
-	tree_context.get_root().add_child.call_deferred(current_dialogue)
+	UniversalCanvas.add_child.call_deferred(current_dialogue)
+	current_dialogue.dialogue_closed.connect(_advance_text)
+
+func _advance_text():
+	goto_next_line()

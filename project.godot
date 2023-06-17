@@ -20,6 +20,7 @@ config/windows_native_icon="res://icon.ico"
 
 Gamemanager="*res://Scripts/gamemanager.gd"
 Deltascript="*res://addons/deltascript/deltascript_singleton.gd"
+UniversalCanvas="*res://UI/UniversalCanvas.tscn"
 
 [deltascript]
 
@@ -88,4 +89,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 2d/snapping/use_gpu_pixel_snap=true

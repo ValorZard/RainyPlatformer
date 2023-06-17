@@ -12,6 +12,7 @@ func pick_up_person(person):
 	if person is Person:
 		# put the person in the scoop
 		# person.set_location(scoop.spawn_point.global_position, player)
+		Deltascript.play_event(load("res://Dialogue/Events/event_" + str(person.person_data.name) + "_C.res"))
 		player.people_array.append(person.person_data)
 		var instance = person_card.instantiate()
 		player.person_dex.add_card(instance)

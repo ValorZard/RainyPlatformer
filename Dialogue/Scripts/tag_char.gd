@@ -5,3 +5,4 @@ func _get_tag_identifier():
 
 func _line_start():
 	event_player.set_event_metadata("Speaker", arguments[0])
+	goto_next_line()
