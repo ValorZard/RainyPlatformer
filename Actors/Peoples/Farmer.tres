@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PersonData" load_steps=3 format=3 uid="uid://5kjgqjgyjumr"]
+
+[ext_resource type="Texture2D" uid="uid://uj0wn7sas77l" path="res://Art/TestGuy.png" id="1_e47qe"]
+[ext_resource type="Script" path="res://Actors/person_data.gd" id="1_jptd4"]
+
+[resource]
+script = ExtResource("1_jptd4")
+name = "Farmer"
+description = "It ain't much, but it's honest work."
+icon = ExtResource("1_e47qe")

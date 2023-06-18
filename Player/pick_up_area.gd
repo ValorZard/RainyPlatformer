@@ -15,6 +15,7 @@ func pick_up_person(person):
 		Deltascript.play_event(load("res://Dialogue/Events/event_" + str(person.person_data.name) + "_C.res"))
 		player.people_array.append(person.person_data)
 		var instance = person_card.instantiate()
+		instance.person_data = person.person_data
 		player.person_dex.add_card(instance)
 		person.queue_free()
 		
