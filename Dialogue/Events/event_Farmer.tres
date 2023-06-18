@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DeltascriptEvent" load_steps=2 format=3 uid="uid://cao18jo46t2ys"]
+
+[ext_resource type="Script" path="res://addons/deltascript/event/deltascript_event.gd" id="1_tr187"]
+
+[resource]
+script = ExtResource("1_tr187")
+event_script = "#char Farmer
+I can’t leave without making sure my crops are okay! They’re my babies!
+
+#char Varshamita
+It won’t matter if you die out here! Come with me, please!
+
+#char Farmer
+I’m staying! It ain’t much but it’s honest work.
+
+#char Varshamita
+Oh for goodness sake. *scoops him up*"
+cached_resources = Array[Resource("res://addons/deltascript/event/deltascript_event_cached_resource.gd")]([])
+cached_nodes = Array[Resource("res://addons/deltascript/event/deltascript_event_cached_node.gd")]([])
