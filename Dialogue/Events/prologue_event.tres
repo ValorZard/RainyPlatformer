@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DeltascriptEvent" load_steps=2 format=3 uid="uid://cfho2dl5uop84"]
+
+[ext_resource type="Script" path="res://addons/deltascript/event/deltascript_event.gd" id="1_jokpm"]
+
+[resource]
+script = ExtResource("1_jokpm")
+event_script = "A long, long time ago...
+
+There was a village by the sea. The people there were poor but happy. They lived off the ocean, eating fish and rice.
+
+They prayed to the nature spirits, and over time, the object of their devotion was focused on the most beautiful one of them all, Varshamita. She became the patron goddess of the village, and the people sang her praises.
+
+The only problem was...
+
+She was REALLY bad at being a goddess.
+
+One day, Varshamita awoke from her bed. When she looked outside, she could see that the entire village was flooded."
+cached_resources = Array[Resource("res://addons/deltascript/event/deltascript_event_cached_resource.gd")]([])
+cached_nodes = Array[Resource("res://addons/deltascript/event/deltascript_event_cached_node.gd")]([])

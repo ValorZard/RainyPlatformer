@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://klj7snqhi74b"]
+
+[ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_tc6hf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1eou"]
+bg_color = Color(0.517647, 0.4, 0.901961, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tc6hf")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+offset_left = 450.0
+offset_top = 300.0
+offset_right = 700.0
+offset_bottom = 600.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e1eou")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Start Game"
+
+[node name="EndButton" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "End Game"
+
+[connection signal="button_down" from="Panel/VBoxContainer/StartButton" to="." method="_on_start_button_button_down"]
+[connection signal="button_down" from="Panel/VBoxContainer/EndButton" to="." method="_on_end_button_button_down"]
