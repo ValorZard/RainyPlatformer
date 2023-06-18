@@ -14,6 +14,7 @@ class_name Player
 # BASIC MOVEMENT VARAIABLES ---------------- #
 var face_direction := 1
 var x_dir := 1
+var is_moving := false
 
 @export var max_speed: float = 560
 @export var acceleration: float = 2880
@@ -71,6 +72,7 @@ func _physics_process(delta: float) -> void:
 	
 	timers(delta)
 	move_and_slide()
+	set_player_animation()
 	handle_UI()
 
 
@@ -80,7 +82,10 @@ func x_movement(delta: float) -> void:
 	# Stop if we're not doing movement inputs.
 	if x_dir == 0: 
 		velocity.x = Vector2(velocity.x, 0).move_toward(Vector2(0,0), deceleration * delta).x
+		is_moving = false
 		return
+	else:
+		is_moving = true
 	
 	# If we are doing movement inputs and above max speed, don't accelerate nor decelerate
 	# Except if we are turning
@@ -162,6 +167,10 @@ func apply_gravity(delta: float) -> void:
 		applied_gravity *= jump_hang_gravity_mult
 	
 	velocity.y += applied_gravity
+
+func set_player_animation():
+	if is_moving and is_on_floor():
+		$Sprite/AnimationPlayer.play("walk")
 
 
 func timers(delta: float) -> void:

@@ -1,14 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://cy40ffinx3qio"]
+[gd_scene load_steps=17 format=3 uid="uid://cy40ffinx3qio"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1"]
 [ext_resource type="Script" path="res://Player/Sprite.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bsyevfkydqypo" path="res://Player/Sprites/frame1.PNG" id="3_3yyic"]
 [ext_resource type="PackedScene" uid="uid://b4g1cqyoecp0s" path="res://UI/PersonDex.tscn" id="3_p0hdk"]
 [ext_resource type="PackedScene" uid="uid://ceel35xn1mxi5" path="res://Player/pick_up_area.tscn" id="4_arxqf"]
+[ext_resource type="Texture2D" uid="uid://b6nhm4dxfto8x" path="res://Player/Sprites/frame2.PNG" id="4_fgxk5"]
 [ext_resource type="PackedScene" uid="uid://0jn8idiebeuu" path="res://UI/PersonCard.tscn" id="5_4ogfr"]
+[ext_resource type="Texture2D" uid="uid://b4eb8vu00whpb" path="res://Player/Sprites/frame3.PNG" id="5_52j0g"]
+[ext_resource type="Texture2D" uid="uid://dt3i7wfpe1kai" path="res://Player/Sprites/frame4.PNG" id="6_ap4b2"]
 [ext_resource type="AudioStream" uid="uid://kieco0saidam" path="res://Audio/sketch7.mp3" id="6_u4po1"]
 
-[sub_resource type="RectangleShape2D" id="2"]
-size = Vector2(32, 24)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_txcss"]
+height = 50.0
 
 [sub_resource type="SeparationRayShape2D" id="1"]
 length = 8.0
@@ -46,10 +50,27 @@ tracks/0/keys = {
 "values": [Vector2(1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_vg3v8"]
+resource_name = "walk"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_3yyic"), ExtResource("4_fgxk5"), ExtResource("5_52j0g"), ExtResource("6_ap4b2")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1lb64"]
 _data = {
 "Jump": SubResource("3"),
-"Land": SubResource("4")
+"Land": SubResource("4"),
+"walk": SubResource("Animation_vg3v8")
 }
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("person_dex") groups=["Player"]]
@@ -67,8 +88,8 @@ jump_hang_gravity_mult = 0.05
 person_dex = NodePath("CanvasLayer/PersonDex")
 
 [node name="SquareCollisionShape" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
-shape = SubResource("2")
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_txcss")
 
 [node name="RaycastCollider1" type="CollisionShape2D" parent="."]
 position = Vector2(-16, 8)
@@ -87,10 +108,10 @@ position = Vector2(0, 8)
 script = ExtResource("2")
 player_path = NodePath("..")
 
-[node name="Polygon2D" type="Polygon2D" parent="Sprite"]
-position = Vector2(0, -8)
-color = Color(0.964706, 0.952941, 0.298039, 1)
-polygon = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, -16)
+[node name="Sprite2D" type="Sprite2D" parent="Sprite"]
+position = Vector2(0, -30)
+scale = Vector2(-0.1, 0.1)
+texture = ExtResource("6_ap4b2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
 libraries = {
