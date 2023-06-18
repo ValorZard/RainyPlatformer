@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bnkjr66plrgut"]
+[gd_scene load_steps=27 format=3 uid="uid://bnkjr66plrgut"]
 
 [ext_resource type="Texture2D" uid="uid://bt6j3k7u0m46i" path="res://Art/Tileset/Genshin/Free.png" id="1_471da"]
 [ext_resource type="Texture2D" uid="uid://dxtx8htjdu1mh" path="res://Art/TilesetOf5.png" id="2_yykoh"]
@@ -15,6 +15,9 @@
 [ext_resource type="Resource" uid="uid://xqhbfx33sqt7" path="res://Actors/Peoples/TeenBoy.tres" id="13_ceioa"]
 [ext_resource type="Resource" uid="uid://c4fmf56sijjg2" path="res://Actors/Peoples/TeenGirl.tres" id="14_pu1l0"]
 [ext_resource type="PackedScene" uid="uid://dvsvoaa1ao4i2" path="res://Scenes/Prologue.tscn" id="15_1flkf"]
+[ext_resource type="Texture2D" uid="uid://c31h8vptgfewm" path="res://Art/Raindrop.png" id="16_01v8e"]
+[ext_resource type="Script" path="res://Scenes/Shrine.gd" id="17_lpb0f"]
+[ext_resource type="Texture2D" uid="uid://dklar3eu1r8il" path="res://icon.svg" id="18_l03v4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwt3e"]
 texture = ExtResource("1_471da")
@@ -4030,6 +4033,21 @@ sources/3 = SubResource("TileSetAtlasSource_6ipoc")
 sources/6 = SubResource("TileSetAtlasSource_nqw3l")
 sources/7 = SubResource("TileSetAtlasSource_520ru")
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yjem0"]
+emission_shape = 3
+emission_box_extents = Vector3(3000, 500, 1)
+particle_flag_disable_z = true
+direction = Vector3(-1, 1, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 1000.0
+initial_velocity_max = 1000.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cp2he"]
+size = Vector2(108, 100)
+
 [node name="GameplayScene" type="Node2D"]
 
 [node name="BackLayer" type="TileMap" parent="."]
@@ -4094,3 +4112,32 @@ offset_left = 468.0
 offset_top = -23.0
 offset_right = 468.0
 offset_bottom = -23.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+process_mode = 3
+position = Vector2(1196, -38)
+amount = 500
+process_material = SubResource("ParticleProcessMaterial_yjem0")
+texture = ExtResource("16_01v8e")
+visibility_rect = Rect2(-2500, -250, 5000, 500)
+
+[node name="Shrine" type="Area2D" parent="."]
+position = Vector2(31, -362)
+collision_mask = 17
+script = ExtResource("17_lpb0f")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Shrine"]
+position = Vector2(413, 557)
+scale = Vector2(0.84375, 0.796875)
+texture = ExtResource("18_l03v4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shrine"]
+position = Vector2(413, 557)
+shape = SubResource("RectangleShape2D_cp2he")
+
+[node name="scoretext" type="RichTextLabel" parent="Shrine"]
+offset_left = 361.0
+offset_top = 510.0
+offset_right = 463.0
+offset_bottom = 550.0

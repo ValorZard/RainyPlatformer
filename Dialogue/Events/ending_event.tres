@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DeltascriptEvent" load_steps=2 format=3 uid="uid://dekwlq5h7l2l7"]
+
+[ext_resource type="Script" path="res://addons/deltascript/event/deltascript_event.gd" id="1_7cdqx"]
+
+[resource]
+script = ExtResource("1_7cdqx")
+event_script = "#char Varshamita
+Well that’s all of ‘em! I hope I never screw up again!
+
+The End.
+	P.S. She screwed up again, but that’s a story for another game.
+"
+cached_resources = Array[Resource("res://addons/deltascript/event/deltascript_event_cached_resource.gd")]([])
+cached_nodes = Array[Resource("res://addons/deltascript/event/deltascript_event_cached_node.gd")]([])
