@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="DeltascriptEvent" load_steps=2 format=3 uid="uid://dllwyje5r4cns"]
+
+[ext_resource type="Script" path="res://addons/deltascript/event/deltascript_event.gd" id="1_hpt4u"]
+
+[resource]
+script = ExtResource("1_hpt4u")
+event_script = "#char Old Man
+Hello, young lady! Who might you be?
+Wait … no, it cannot be true! You are-
+MY GODDESS! *bows profusely*
+
+#char Varshamita
+No, no it’s fine! You don’t need to bow so hard!"
+cached_resources = Array[Resource("res://addons/deltascript/event/deltascript_event_cached_resource.gd")]([])
+cached_nodes = Array[Resource("res://addons/deltascript/event/deltascript_event_cached_node.gd")]([])

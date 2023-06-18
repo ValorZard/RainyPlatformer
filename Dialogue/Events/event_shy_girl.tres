@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="DeltascriptEvent" load_steps=2 format=3 uid="uid://ckrqe3714ab20"]
+
+[ext_resource type="Script" path="res://addons/deltascript/event/deltascript_event.gd" id="1_2icbw"]
+
+[resource]
+script = ExtResource("1_2icbw")
+event_script = "#char Shy girl
+W-wow. You’re really pretty…
+
+#char Varshamita
+Aw thanks! You’re pretty cute too!
+
+#char Shy girl
+R-really? That’s the first time anyone said that to me.
+
+#char Varshamita
+You have to have more self-confidence. Anyways, up you go!
+"
+cached_resources = Array[Resource("res://addons/deltascript/event/deltascript_event_cached_resource.gd")]([])
+cached_nodes = Array[Resource("res://addons/deltascript/event/deltascript_event_cached_node.gd")]([])

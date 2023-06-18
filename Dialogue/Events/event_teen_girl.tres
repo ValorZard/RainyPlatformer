@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DeltascriptEvent" load_steps=2 format=3 uid="uid://dtvagdpjx8a8t"]
+
+[ext_resource type="Script" path="res://addons/deltascript/event/deltascript_event.gd" id="1_qd8ix"]
+
+[resource]
+script = ExtResource("1_qd8ix")
+event_script = "#char Teen girl
+Could you please find my boyfriend? He’s here too, and I can’t leave without him. We are destined to be together! I love him!
+	
+#char Varshamita
+Sorry lady, you're coming with me.
+
+#char Teen girl
+Noooooooo!
+
+#char Varshamita
+Too late, up you go. If we find him along the way, I’ll bring him to ya, alright?"
+cached_resources = Array[Resource("res://addons/deltascript/event/deltascript_event_cached_resource.gd")]([])
+cached_nodes = Array[Resource("res://addons/deltascript/event/deltascript_event_cached_node.gd")]([])
