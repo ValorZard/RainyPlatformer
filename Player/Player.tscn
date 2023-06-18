@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cy40ffinx3qio"]
+[gd_scene load_steps=18 format=3 uid="uid://cy40ffinx3qio"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1"]
 [ext_resource type="Script" path="res://Player/Sprite.gd" id="2"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b4eb8vu00whpb" path="res://Player/Sprites/frame3.PNG" id="5_52j0g"]
 [ext_resource type="Texture2D" uid="uid://dt3i7wfpe1kai" path="res://Player/Sprites/frame4.PNG" id="6_ap4b2"]
 [ext_resource type="AudioStream" uid="uid://kieco0saidam" path="res://Audio/sketch7.mp3" id="6_u4po1"]
+[ext_resource type="AudioStream" uid="uid://1y6204uh0mgr" path="res://Player/walking_sound.wav" id="7_y0g8d"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_txcss"]
 height = 50.0
@@ -118,6 +119,9 @@ libraries = {
 "": SubResource("AnimationLibrary_1lb64")
 }
 
+[node name="WalkingAudioPlayer" type="AudioStreamPlayer" parent="Sprite"]
+stream = ExtResource("7_y0g8d")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PersonDex" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("3_p0hdk")]
@@ -134,4 +138,5 @@ position = Vector2(0, -63)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("6_u4po1")
+volume_db = -8.0
 autoplay = true

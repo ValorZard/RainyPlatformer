@@ -171,6 +171,11 @@ func apply_gravity(delta: float) -> void:
 func set_player_animation():
 	if is_moving and is_on_floor():
 		$Sprite/AnimationPlayer.play("walk")
+		if !$Sprite/WalkingAudioPlayer.playing:
+			$Sprite/WalkingAudioPlayer.play()
+	else:
+		$Sprite/AnimationPlayer.stop()
+		$Sprite/WalkingAudioPlayer.stop()
 
 
 func timers(delta: float) -> void:
