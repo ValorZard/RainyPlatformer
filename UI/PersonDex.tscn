@@ -24,7 +24,7 @@ layout_mode = 0
 offset_top = 48.0
 offset_right = 1152.0
 offset_bottom = 648.0
-columns = 8
+columns = 6
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 2

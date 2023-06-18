@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PersonData" load_steps=3 format=3 uid="uid://5v33yq8muwt3"]
+
+[ext_resource type="Texture2D" uid="uid://uj0wn7sas77l" path="res://Art/TestGuy.png" id="1_e8nqp"]
+[ext_resource type="Script" path="res://Actors/person_data.gd" id="2_w8p3n"]
+
+[resource]
+script = ExtResource("2_w8p3n")
+name = "Mom"
+description = "A tired mother, often found trying to find her daughter's hiding spots."
+icon = ExtResource("1_e8nqp")

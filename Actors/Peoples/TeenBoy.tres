@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PersonData" load_steps=3 format=3 uid="uid://xqhbfx33sqt7"]
+
+[ext_resource type="Script" path="res://Actors/person_data.gd" id="1_5145t"]
+[ext_resource type="Texture2D" uid="uid://uj0wn7sas77l" path="res://Art/TestGuy.png" id="1_fpb4w"]
+
+[resource]
+script = ExtResource("1_5145t")
+name = "TeenBoy"
+description = "One half of a loving couple separated by the storm. He will do anything to find his beloved again."
+icon = ExtResource("1_fpb4w")

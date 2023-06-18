@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PersonData" load_steps=3 format=3 uid="uid://shtgr1hffyoh"]
+
+[ext_resource type="Script" path="res://Actors/person_data.gd" id="1_7j5s0"]
+[ext_resource type="Texture2D" uid="uid://uj0wn7sas77l" path="res://Art/TestGuy.png" id="1_tdtqj"]
+
+[resource]
+script = ExtResource("1_7j5s0")
+name = "OldMan"
+description = "An old yet faithful man. Despite his age, he is dedicated to the upkeep of the village."
+icon = ExtResource("1_tdtqj")

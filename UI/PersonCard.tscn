@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://0jn8idiebeuu"]
+[gd_scene load_steps=6 format=3 uid="uid://0jn8idiebeuu"]
 
 [ext_resource type="Script" path="res://UI/PersonCard.gd" id="1_gd57k"]
 [ext_resource type="Resource" uid="uid://b86875x15u2s4" path="res://Actors/Peoples/Steve.tres" id="2_g58qj"]
 [ext_resource type="Texture2D" uid="uid://dklar3eu1r8il" path="res://icon.svg" id="3_pw5uu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6xqb"]
+bg_color = Color(0.486275, 0.486275, 0.486275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rsh6o"]
+bg_color = Color(0.27451, 0.141176, 0.262745, 1)
 
 [node name="PersonCard" type="Control"]
 layout_mode = 3
@@ -11,26 +17,41 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(90, 140)
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
 script = ExtResource("1_gd57k")
 person_data = ExtResource("2_g58qj")
 
+[node name="Panel2" type="Panel" parent="."]
+custom_minimum_size = Vector2(180, 280)
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 280.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g6xqb")
+
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
-offset_right = 150.0
-offset_bottom = 250.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 165.0
+offset_bottom = 265.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rsh6o")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 0
 offset_right = 150.0
-offset_bottom = 250.0
+offset_bottom = 256.0
 
 [node name="NameLabel" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 
-[node name="DescriptionLabel" type="Label" parent="Panel/VBoxContainer"]
+[node name="DescriptionLabel" type="RichTextLabel" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+text = "TEST"
 autowrap_mode = 2
 
 [node name="Icon" type="TextureRect" parent="Panel/VBoxContainer"]

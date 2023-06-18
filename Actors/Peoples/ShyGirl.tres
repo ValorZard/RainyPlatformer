@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PersonData" load_steps=3 format=3 uid="uid://fe2rwkfx8nta"]
+
+[ext_resource type="Script" path="res://Actors/person_data.gd" id="1_buau5"]
+[ext_resource type="Texture2D" uid="uid://uj0wn7sas77l" path="res://Art/TestGuy.png" id="1_wh0bd"]
+
+[resource]
+script = ExtResource("1_buau5")
+name = "ShyGirl"
+description = "A timid girl who admires Varshamita."
+icon = ExtResource("1_wh0bd")

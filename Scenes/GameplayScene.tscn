@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bnkjr66plrgut"]
+[gd_scene load_steps=22 format=3 uid="uid://bnkjr66plrgut"]
 
 [ext_resource type="Texture2D" uid="uid://bt6j3k7u0m46i" path="res://Art/Tileset/Genshin/Free.png" id="1_471da"]
 [ext_resource type="Texture2D" uid="uid://dxtx8htjdu1mh" path="res://Art/TilesetOf5.png" id="2_yykoh"]
@@ -8,6 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://cy40ffinx3qio" path="res://Player/Player.tscn" id="6_ttrj1"]
 [ext_resource type="PackedScene" uid="uid://cfpv8m0lwxvea" path="res://Actors/person.tscn" id="7_v7rdi"]
 [ext_resource type="Resource" uid="uid://5kjgqjgyjumr" path="res://Actors/Peoples/Farmer.tres" id="8_k7mqp"]
+[ext_resource type="Resource" uid="uid://bd0adrr8hecwd" path="res://Actors/Peoples/Daughter.tres" id="9_3ystt"]
+[ext_resource type="Resource" uid="uid://5v33yq8muwt3" path="res://Actors/Peoples/Mom.tres" id="10_7e6nm"]
+[ext_resource type="Resource" uid="uid://shtgr1hffyoh" path="res://Actors/Peoples/OldMan.tres" id="11_ekhbp"]
+[ext_resource type="Resource" uid="uid://fe2rwkfx8nta" path="res://Actors/Peoples/ShyGirl.tres" id="12_7apek"]
+[ext_resource type="Resource" uid="uid://xqhbfx33sqt7" path="res://Actors/Peoples/TeenBoy.tres" id="13_ceioa"]
+[ext_resource type="Resource" uid="uid://c4fmf56sijjg2" path="res://Actors/Peoples/TeenGirl.tres" id="14_pu1l0"]
+[ext_resource type="PackedScene" uid="uid://dvsvoaa1ao4i2" path="res://Scenes/Prologue.tscn" id="15_1flkf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwt3e"]
 texture = ExtResource("1_471da")
@@ -4051,3 +4058,39 @@ layer_0/tile_data = PackedInt32Array(393237, 655367, 15, 458773, 655367, 16, 524
 position = Vector2(659, 40)
 player = NodePath("../Player")
 person_data = ExtResource("8_k7mqp")
+
+[node name="Person2" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_v7rdi")]
+position = Vector2(794, -91)
+player = NodePath("../Player")
+person_data = ExtResource("9_3ystt")
+
+[node name="Person3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_v7rdi")]
+position = Vector2(843, -91)
+player = NodePath("../Player")
+person_data = ExtResource("10_7e6nm")
+
+[node name="Person4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_v7rdi")]
+position = Vector2(881, -91)
+player = NodePath("../Player")
+person_data = ExtResource("11_ekhbp")
+
+[node name="Person5" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_v7rdi")]
+position = Vector2(932, -88)
+player = NodePath("../Player")
+person_data = ExtResource("12_7apek")
+
+[node name="Person6" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_v7rdi")]
+position = Vector2(988, -91)
+player = NodePath("../Player")
+person_data = ExtResource("13_ceioa")
+
+[node name="Person7" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_v7rdi")]
+position = Vector2(1341, -139)
+player = NodePath("../Player")
+person_data = ExtResource("14_pu1l0")
+
+[node name="Prologue" parent="." instance=ExtResource("15_1flkf")]
+offset_left = 468.0
+offset_top = -23.0
+offset_right = 468.0
+offset_bottom = -23.0

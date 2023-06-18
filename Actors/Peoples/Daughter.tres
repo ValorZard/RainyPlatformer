@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PersonData" load_steps=3 format=3 uid="uid://bd0adrr8hecwd"]
+
+[ext_resource type="Texture2D" uid="uid://uj0wn7sas77l" path="res://Art/TestGuy.png" id="1_4ecdr"]
+[ext_resource type="Script" path="res://Actors/person_data.gd" id="1_lllg0"]
+
+[resource]
+script = ExtResource("1_lllg0")
+name = "Daughter"
+description = "A young girl. She likes hiding in obscure places."
+icon = ExtResource("1_4ecdr")
