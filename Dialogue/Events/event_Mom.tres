@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_0gdrh")
-event_script = "#char Some kid's mother
+event_script = "#char Someone'sMother
 Could you please find my daughter? She has been lost in the flooding and I don’t want to leave without her!
 
 #char Varshamita
