@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_hpt4u")
-event_script = "#char Old Man
+event_script = "#char OldMan
 Hello, young lady! Who might you be?
 Wait … no, it cannot be true! You are-
 MY GODDESS! *bows profusely*

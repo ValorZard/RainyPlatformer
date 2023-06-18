@@ -4,13 +4,13 @@
 
 [resource]
 script = ExtResource("1_2icbw")
-event_script = "#char Shy girl
+event_script = "#char ShyGirl
 W-wow. You’re really pretty…
 
 #char Varshamita
 Aw thanks! You’re pretty cute too!
 
-#char Shy girl
+#char ShyGirl
 R-really? That’s the first time anyone said that to me.
 
 #char Varshamita

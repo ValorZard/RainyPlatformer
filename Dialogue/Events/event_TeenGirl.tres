@@ -4,13 +4,13 @@
 
 [resource]
 script = ExtResource("1_qd8ix")
-event_script = "#char Teen girl
+event_script = "#char TeenGirl
 Could you please find my boyfriend? He’s here too, and I can’t leave without him. We are destined to be together! I love him!
 	
 #char Varshamita
 Sorry lady, you're coming with me.
 
-#char Teen girl
+#char TeenGirl
 Noooooooo!
 
 #char Varshamita

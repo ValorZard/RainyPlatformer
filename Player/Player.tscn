@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cy40ffinx3qio"]
+[gd_scene load_steps=12 format=3 uid="uid://cy40ffinx3qio"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1"]
 [ext_resource type="Script" path="res://Player/Sprite.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://b4g1cqyoecp0s" path="res://UI/PersonDex.tscn" id="3_p0hdk"]
 [ext_resource type="PackedScene" uid="uid://ceel35xn1mxi5" path="res://Player/pick_up_area.tscn" id="4_arxqf"]
 [ext_resource type="PackedScene" uid="uid://0jn8idiebeuu" path="res://UI/PersonCard.tscn" id="5_4ogfr"]
+[ext_resource type="AudioStream" uid="uid://kieco0saidam" path="res://Audio/sketch7.mp3" id="6_u4po1"]
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(32, 24)
@@ -23,10 +24,10 @@ tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.3),
-"transitions": PackedFloat32Array(1.68179, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1.68179),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(0.8, 1.2), Vector2(1, 1)]
+"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="4"]
@@ -39,10 +40,10 @@ tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(0.241484, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(0.241484),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1.4, 1), Vector2(1, 1)]
+"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1lb64"]
@@ -108,3 +109,8 @@ person_card = ExtResource("5_4ogfr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -63)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("6_u4po1")
+autoplay = true

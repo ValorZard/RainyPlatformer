@@ -4,7 +4,8 @@
 
 [resource]
 script = ExtResource("1_jokpm")
-event_script = "A long, long time ago...
+event_script = "#char Narrator
+A long, long time ago...
 
 There was a village by the sea. The people there were poor but happy. They lived off the ocean, eating fish and rice.
 
